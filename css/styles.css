@@ -22,6 +22,9 @@ h2 {
     font-family: Arial;
 }
 
+
+/* || SPECIFIC */
+
 /* Header */
 header h1>em {
     color: red;
@@ -89,7 +92,7 @@ main article:nth-of-type(1) {
     text-align: justify;
 }
 
-main article:nth-of-type(1)::after {
+/* main article:nth-of-type(1)::after {
     content: "";
     display: block;
     background-image: url(../images/tube.png);
@@ -99,7 +102,155 @@ main article:nth-of-type(1)::after {
     width: 100%;
     height: 400px;
     margin-top: 100px;
+} */
+
+
+
+main article:nth-of-type(1) h2 {
+    margin: 0;
+    color: red;
+    font-size: 2.7em;
 }
+
+main article:nth-of-type(1) p {
+    margin: 0;
+    max-width: 150ch;
+    letter-spacing: 1px;
+    font-weight: normal;
+}
+
+main article:nth-of-type(1) p::first-line {
+    font-weight: bold;
+}
+
+main aside:nth-of-type(1) {
+    grid-area: aside1;
+    border-right: solid 1px;
+    font-size: 1.9em;
+    padding-left: 79px;
+    padding-right: 40px;
+    text-align: left;
+    height: 590px;
+}
+
+main aside:nth-of-type(1) p {
+    margin: 0;
+    max-width: max-content;
+}
+
+main aside:nth-of-type(1) p:nth-of-type(2) {
+    margin: 0;
+    max-width: 10ch;
+}
+
+main aside:nth-of-type(1) p a {
+    display: grid;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    word-break: break-all;
+    width: 185px;
+}
+
+main article:nth-of-type(2) {
+    grid-area: article2;
+}
+
+main article:nth-of-type(2) h2 {
+    text-transform: lowercase;
+    font-size: 5.6em;
+    margin: 0;
+    font-weight: 300;
+    font-family: "Open Sans";
+}
+
+main article:nth-of-type(2) h2::first-letter {
+    text-transform: uppercase;
+}
+
+main article:nth-of-type(2) p {
+    margin: 0;
+    padding-right: 40px;
+    text-align: justify;
+    letter-spacing: 1px;
+}
+
+main article:nth-of-type(2) p::first-line {
+    font-weight: bold;
+}
+
+main article:nth-of-type(2) p a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main article:nth-of-type(2) p mark {
+    background-color: rgba(246, 240, 243, 255);
+    background-color: rgb(246, 240, 243);
+}
+
+main aside:nth-of-type(2) {
+    grid-area: aside2;
+    display: grid;
+    background-color: #f5f0f2;
+    position: relative;
+    top: -150px;
+    height: 650px;
+}
+
+main aside:nth-of-type(2) h2::before {
+    content: "+";
+    color: black;
+    font-size: 4em;
+    font-weight: 100;
+    height: 200px;
+    position: relative;
+    top: -85px;
+}
+
+main aside:nth-of-type(2) h2 {
+    color: red;
+    font-size: 1.9em;
+    margin: 0;
+    display: flex;
+    top: 50px;
+    position: relative;
+}
+
+main aside:nth-of-type(2) p {
+    padding-left: 30px;
+    margin: 0;
+    padding-right: 60px;
+    text-align: justify;
+    max-width: 50ch;
+}
+
+main aside:nth-of-type(2)>p:nth-of-type(1) {
+    position: relative;
+    top: -114px;
+    letter-spacing: 1.3px;
+}
+
+main aside:nth-of-type(2) ul {
+    display: grid;
+    margin-top: 10px;
+    position: relative;
+    top: -114px;
+}
+
+main aside:nth-of-type(2) ul li {
+    list-style-type: "+";
+    padding-right: 10px;
+}
+
+main aside:nth-of-type(2) ul li h3 {
+    padding-left: 10px;
+    margin: 0;
+}
+
+
+
 
 /* Footer */
 
