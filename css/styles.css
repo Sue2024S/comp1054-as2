@@ -15,7 +15,7 @@ html {
 
 /* Headings */
 h1 {
-    font-family: "Libre Franklin";
+    font-family: "Libre Franklin", sans-serif;
 }
 
 h2 {
@@ -25,7 +25,27 @@ h2 {
 
 /* || SPECIFIC */
 
+/* Container */
+#container {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    margin: 100px;
+    padding-left: 75px;
+    padding-right: 75px;
+}
+
 /* Header */
+header {
+    grid-area: header;
+    display: grid;
+    grid-template-areas:
+        "header-p"
+        "header-h1";
+}
+
 header h1>em {
     color: red;
     font-style: normal;
@@ -55,23 +75,12 @@ header h1 {
 
 header p {
     text-transform: uppercase;
-    grid-area: header-p;
+    font-family: "Poly", Helvetica, sans-serif;
+    font-size: 1.2rem;
     margin: 0;
-    font-family: "Poly", Helvetica, Calibri;
-    font-size: 1.8em;
 }
 
-/* container grid for image */
-#container {
-    display: grid;
-    grid-template-areas:
-        "header"
-        "main"
-        "footer";
-    margin: 100px;
-    padding-left: 75px;
-    padding-right: 75px;
-}
+
 
 /* Main */
 main {
@@ -103,8 +112,6 @@ main article:nth-of-type(1) {
     height: 400px;
     margin-top: 100px;
 } */
-
-
 
 main article:nth-of-type(1) h2 {
     margin: 0;
@@ -249,17 +256,71 @@ main aside:nth-of-type(2) ul li h3 {
     margin: 0;
 }
 
+main aside:nth-of-type(2) ul li:nth-of-type(3) h3 {
+    padding-right: 100px;
+    margin: 0;
+}
 
+main aside:nth-of-type(2) ul li p {
+    padding: 0;
+    margin: 0;
+    padding-left: 10px;
+    letter-spacing: 1.4px;
+}
+
+main aside:nth-of-type(2) ul li p a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
 
 
 /* Footer */
 
+footer {
+    grid-area: footer;
+    position: relative;
+    right: 10px;
+}
+
+footer p {
+    position: relative;
+    left: 10px;
+    font-size: 1.4em;
+}
+
+footer>p>small>em {
+    text-decoration: none;
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 1.3em;
+    padding-right: 10px;
+}
+
+footer>p>small>abbr {
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    left: 3px;
+    font-size: .8em;
+}
+
+abbr[title] {
+    text-decoration: none;
+}
+
+footer p small {
+    text-transform: lowercase;
+    position: relative;
+    bottom: 1px;
+}
 
 /* Media Query */
-/* add media query for max-w9dth */
+
+/* add media query for max-width */
 @media screen and (max-width: 900px) {
 
-    /* change margin and padding */
+    /* container */
     #container {
         margin: 0;
         padding-left: 30px;
