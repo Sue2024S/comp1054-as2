@@ -55,7 +55,6 @@ header h1>em {
     left: -5px;
 }
 
-
 header h1 {
     text-transform: lowercase;
     grid-area: header-h1;
@@ -78,8 +77,8 @@ header p {
     font-family: "Poly", Helvetica, sans-serif;
     font-size: 1.2rem;
     margin: 0;
+    grid-area: header-p;
 }
-
 
 
 /* Main */
@@ -94,12 +93,17 @@ main {
     border-left: solid 1px;
     border-bottom: solid 1px;
     grid-template-rows: 1fr 500px;
+    height:auto;
 }
 
-main article:nth-of-type(1) {
-    grid-area: article1;
-    text-align: justify;
-}
+/* image */
+article img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display:block;
+  }
 
 /* main article:nth-of-type(1)::after {
     content: "";
@@ -112,6 +116,12 @@ main article:nth-of-type(1) {
     height: 400px;
     margin-top: 100px;
 } */
+
+/* article 1 */
+main article:nth-of-type(1) {
+    grid-area: article1;
+    text-align: justify;
+}
 
 main article:nth-of-type(1) h2 {
     margin: 0;
@@ -130,14 +140,27 @@ main article:nth-of-type(1) p::first-line {
     font-weight: bold;
 }
 
+/* asides */
+main aside:nth-of-type(1),
+main aside:nth-of-type(2) {
+  min-height: 400px;
+}
+
+
+/* aside 1 */
 main aside:nth-of-type(1) {
     grid-area: aside1;
     border-right: solid 1px;
-    font-size: 1.9em;
+    font-size: 1.8em;
     padding-left: 79px;
     padding-right: 40px;
     text-align: left;
-    height: 590px;
+    height: auto;
+    position: static;
+    width: 100%;
+    height: auto;
+    margin-top: 40px;
+    padding: 20px;
 }
 
 main aside:nth-of-type(1) p {
@@ -159,6 +182,7 @@ main aside:nth-of-type(1) p a {
     width: 185px;
 }
 
+/* article 2 */
 main article:nth-of-type(2) {
     grid-area: article2;
 }
@@ -184,6 +208,7 @@ main article:nth-of-type(2) p {
 
 main article:nth-of-type(2) p::first-line {
     font-weight: bold;
+    font-family: "Poly", Helvetica, sans-serif;
 }
 
 main article:nth-of-type(2) p a {
@@ -196,6 +221,8 @@ main article:nth-of-type(2) p mark {
     background-color: rgba(246, 240, 243, 255);
     background-color: rgb(246, 240, 243);
 }
+
+/* aside 2 */
 
 main aside:nth-of-type(2) {
     grid-area: aside2;
@@ -322,15 +349,16 @@ footer p small {
 
     /* container */
     #container {
-        margin: 0;
+        margin: 30px;
         padding-left: 30px;
         padding-right: 30px;
     }
 
     /* Header */
     header h1 {
-        font-size: 3.625rem;
+        font-size: 4em;
         height: 100px;
+        background-size: contain;
     }
 
     header p {
@@ -348,13 +376,24 @@ footer p small {
         grid-template-columns: 1fr;
         grid-template-rows: 700px 450px 700px 500px;
         column-gap: 0;
+        row-gap: 40px;
     }   
 
+    main aside:nth-of-type(1),
+    main aside:nth-of-type(2),
+    main article:nth-of-type(1),
+    main article:nth-of-type(2) {
+        padding: 20px;
+        height: auto;
+    }
+
+    /* article */
     main article {
         padding-left: 15px;
         padding-right: 15px;
     }
 
+    /* article 1 */
     main article:nth-of-type(1) h2 {
         font-size: 1.8em;
     }
@@ -364,9 +403,20 @@ footer p small {
         height: 300px;
     }
 
+    /* article 2 */
     main article:nth-of-type(2) h2 {
         font-size: 3.6em;
     }
+
+    /* aside 1 */
+    main aside:nth-of-type(1) {
+        position: absolute;
+        left: 10%;
+        height: 90vh;
+        top: 20vh;
+    }
+
+    
 
     /* Footer */
     footer p {
